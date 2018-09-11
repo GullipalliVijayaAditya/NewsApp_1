@@ -6,30 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <android.support.v7.widget.Toolbar
-        android:id="@+id/news_app_toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"
-        android:elevation="@dimen/toolbar_elevation"
-        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
-        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        tools:targetApi="lollipop" />
-
     <android.support.v7.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@+id/news_app_toolbar" />
-
+        android:id="@+id/news_list"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="@dimen/eight_dp"
+        android:layout_height="wrap_content">
+    </android.support.v7.widget.RecyclerView>
     <TextView
-        android:id="@+id/status_textView"
+        android:id="@+id/status_text_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:fontFamily="sans-serif-light"
-        android:text="@string/no_news_loaded"
-        android:textAlignment="center"
-        android:textColor="@color/colorNoNewsLoaded"
-        android:textSize="@dimen/textSizeNoNewsLoaded" />
+        android:visibility="gone"
+        tools:text="no news feed" />
+    <TextView
+        android:id="@+id/network_status_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        tools:text="@string/status_text" />
+    <ProgressBar
+        android:id="@+id/loading_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>
