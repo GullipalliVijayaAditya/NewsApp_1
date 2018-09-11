@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6278f7</color>
+    <color name="colorPrimaryDark">#0022fc</color>
+    <color name="colorAccent">#df4150</color>
+    <color name="colorNoNewsLoaded">@android:color/darker_gray</color>
+    <color name="colorTag">@color/colorPrimary</color>
+</resources>
