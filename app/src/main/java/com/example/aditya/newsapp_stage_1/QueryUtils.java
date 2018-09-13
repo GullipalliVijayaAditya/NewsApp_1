@@ -20,15 +20,10 @@ import java.util.List;
 
 public class QueryUtils {
     private static final String LOG_TAG = QueryUtils.class.getName();
-
     private QueryUtils() {
 
     }
 
-    /**
-     * Return a list of {@link NewsData} objects that has been built up from
-     * parsing the given JSON response.
-     */
     private static List<NewsData> extractNewsFeedsFromJson(String newsFeedJSON) {
 
         if (TextUtils.isEmpty(newsFeedJSON)) {
@@ -56,7 +51,7 @@ public class QueryUtils {
                 if (tags.length() > 0) {
                     author = tags.getJSONObject(0).getString("webTitle");
                 }
-                NewsData data = new NewsData(thumbnail, author, title, date, webUrl,sectionName);
+                NewsData data = new NewsData(thumbnail, author, title, date, webUrl, sectionName);
                 newsData.add(data);
             }
 
@@ -112,19 +107,12 @@ public class QueryUtils {
                 urlConnection.disconnect();
             }
             if (inputStream != null) {
-                // Closing the input stream could throw an IOException, which is why
-                // the makeHttpRequest(URL url) method signature specifies than an IOException
-                // could be thrown.
                 inputStream.close();
             }
         }
         return jsonResponse;
     }
 
-    /**
-     * Convert the {@link InputStream} into a String which contains the
-     * whole JSON response from the server.
-     */
     private static String readFromStream(InputStream inputStream) throws IOException {
         StringBuilder output = new StringBuilder();
         if (inputStream != null) {
@@ -139,14 +127,9 @@ public class QueryUtils {
         return output.toString();
     }
 
-    /**
-     * Query the Guardian dataset and return a list of {@link NewsData} objects.
-     */
     public static List<NewsData> fetchEarthquakeData(String requestUrl) {
-        // Create URL object
         URL url = createUrl(requestUrl);
         Log.d(LOG_TAG, "URL " + url);
-        // Perform HTTP request to the URL and receive a JSON response back
         String jsonResponse = null;
         try {
             jsonResponse = makeHttpRequest(url);
@@ -158,4 +141,3 @@ public class QueryUtils {
         return earthquakes;
     }
 }
-

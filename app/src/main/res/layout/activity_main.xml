@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context=".MainActivity">
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/news_list"
         android:layout_width="wrap_content"
-        android:layout_marginStart="@dimen/eight_dp"
-        android:layout_height="wrap_content">
-    </android.support.v7.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/eight_dp"></android.support.v7.widget.RecyclerView>
+
     <TextView
         android:id="@+id/status_text_view"
         android:layout_width="wrap_content"
@@ -19,6 +19,7 @@
         android:layout_centerInParent="true"
         android:visibility="gone"
         tools:text="no news feed" />
+
     <TextView
         android:id="@+id/network_status_text_view"
         android:layout_width="wrap_content"
@@ -26,10 +27,11 @@
         android:layout_centerInParent="true"
         android:visibility="gone"
         tools:text="@string/status_text" />
+
     <ProgressBar
         android:id="@+id/loading_indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
+        android:layout_centerInParent="true" />
 
 </RelativeLayout>

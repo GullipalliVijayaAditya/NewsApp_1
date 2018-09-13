@@ -19,9 +19,37 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>  {
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
     private List<NewsData> newsData;
     private Context context;
+
+    public NewsAdapter(Context context, ArrayList<NewsData> newsData) {
+        this.context = context;
+        this.newsData = newsData;
+    }
+
+    @NonNull
+    @Override
+    public NewsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_feed_layout, parent, false);
+        return new ViewHolder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
+        NewsData data = newsData.get(position);
+        holder.feedTitle.setText(data.getTitle());
+        holder.feedAuthor.setText(data.getAuthor());
+        holder.sectionName.setText(data.getSectionName());
+        Glide.with(context).load(data.getFeedImage()).into(holder.thumbnail);
+        String[] dateTime = data.getDateOfPublish().split("T");
+        holder.feedDate.setText(dateTime[0]);
+    }
+
+    @Override
+    public int getItemCount() {
+        return newsData.size();
+    }
 
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
@@ -50,33 +78,5 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder>  {
                 v.getContext().startActivity(intent);
             }
         }
-    }
-
-    public NewsAdapter(Context context, ArrayList<NewsData> newsData) {
-        this.context = context;
-        this.newsData = newsData;
-    }
-
-    @NonNull
-    @Override
-    public NewsAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.news_feed_layout, parent, false);
-        return new ViewHolder(view);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull NewsAdapter.ViewHolder holder, int position) {
-        NewsData data = newsData.get(position);
-        holder.feedTitle.setText(data.getTitle());
-        holder.feedAuthor.setText(data.getAuthor());
-        holder.sectionName.setText(data.getSectionName());
-        Glide.with(context).load(data.getFeedImage()).into(holder.thumbnail);
-        String[] dateTime = data.getDateOfPublish().split("T");
-        holder.feedDate.setText(dateTime[0]);
-    }
-
-    @Override
-    public int getItemCount() {
-        return newsData.size();
     }
 }

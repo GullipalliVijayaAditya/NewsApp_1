@@ -4,8 +4,8 @@
     <dimen name="one_two_text_size_sp">12sp</dimen>
     <dimen name="eight_dp">8dp</dimen>
     <dimen name="zero_dp">0dp</dimen>
-    <dimen name="one_zero_zero_dp">100dp</dimen>
-    <dimen name="one_two_zero_dp">120dp</dimen>
+    <dimen name="hundred_dp">100dp</dimen>
+    <dimen name="one_hundred_two_zero_dp">120dp</dimen>
     <dimen name="title_text_view_margin_bottom">8dp</dimen>
     <dimen name="section_name_text_view_text_size">12sp</dimen>
 </resources>

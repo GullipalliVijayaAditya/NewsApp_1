@@ -29,4 +29,3 @@ public class NewsFeedLoader extends AsyncTaskLoader<List<NewsData>> {
         forceLoad();
     }
 }
-

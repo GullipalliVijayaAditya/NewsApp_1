@@ -3,8 +3,8 @@
     <string name="network_status">no internet connection!Please Check internet connection</string>
     <string name="status_text">no news found!</string>
     <string name="imageHere">imageHere</string>
-    <string name="Panjab">Panjab</string>
-    <string name="tarsbir_singh">Tarsbir Singh</string>
-    <string name="king">Maharaj Ranjit Singh</string>
-    <string name="date">21/08/2018</string>
+    <string name="news">News</string>
+    <string name="headlines">Headlines</string>
+    <string name="articles">Articles</string>
+    <string name="date">00/00/0000</string>
 </resources>

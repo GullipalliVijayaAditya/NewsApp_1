@@ -5,8 +5,8 @@ import android.content.Context;
 import android.content.Loader;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
@@ -19,7 +19,10 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<NewsData>>  {
+public class MainActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<List<NewsData>> {
+    private static final int NEWSFEED_LOADER_ID = 1;
+    private static final String FEEDS_URL = "https://content.guardianapis.com/search?show-fields=thumbnail&show-tags=contributor&api-key=561b5437-2d70-4b45-aefe-31ec0d32776e";
+    public RecyclerView.LayoutManager layoutManager;
     @BindView(R.id.news_list)
     RecyclerView newsList;
     @BindView(R.id.status_text_view)
@@ -29,10 +32,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     @BindView(R.id.network_status_text_view)
     TextView networkStatusTextView;
     private RecyclerView.Adapter newsAdapter;
-    public RecyclerView.LayoutManager layoutManager;
     private ArrayList<NewsData> _newsData;
-    private static final int NEWSFEED_LOADER_ID = 1;
-    private static final String FEEDS_URL = "https://content.guardianapis.com/search?show-fields=thumbnail&show-tags=contributor&api-key=561b5437-2d70-4b45-aefe-31ec0d32776e";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

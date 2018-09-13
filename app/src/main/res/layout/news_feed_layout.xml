@@ -2,14 +2,16 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="@dimen/one_zero_zero_dp"
+    android:layout_margin="@dimen/eight_dp"
+    android:layout_height="@dimen/hundred_dp"
+    android:background="@color/colorMain"
     android:orientation="horizontal">
 
     <ImageView
         android:id="@+id/feed_image"
-        android:layout_width="@dimen/one_two_zero_dp"
-        android:layout_height="@dimen/one_zero_zero_dp"
-        android:layout_marginEnd="@dimen/eight_dp"
+        android:layout_width="@dimen/hundred_dp"
+        android:layout_height="@dimen/hundred_dp"
+        android:layout_margin="@dimen/eight_dp"
         android:contentDescription="@string/imageHere"
         tools:src="@drawable/news" />
 
@@ -24,12 +26,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/title_text_view_margin_bottom"
+            android:layout_marginTop="@dimen/eight_dp"
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/white"
             android:maxLines="2"
-            android:layout_marginTop="@dimen/eight_dp"
             android:textSize="@dimen/feed_title_text_size"
-            tools:text="@string/Panjab" />
+            tools:text="@string/news" />
 
         <TextView
             android:id="@+id/feed_section_name"
@@ -37,16 +40,17 @@
             android:layout_height="wrap_content"
             android:ellipsize="end"
             android:fontFamily="sans-serif-medium"
+            android:textColor="@android:color/white"
             android:textAllCaps="true"
             android:textSize="@dimen/section_name_text_view_text_size"
-            tools:text="@string/king" />
+            tools:text="@string/headlines" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginRight="@dimen/eight_dp"
             android:layout_marginTop="2dp"
-            android:layout_marginEnd="@dimen/eight_dp">
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/feed_author"
@@ -54,14 +58,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:textSize="@dimen/one_two_text_size_sp"
-                tools:text="@string/tarsbir_singh" />
+                tools:text="@string/articles" />
 
             <TextView
                 android:id="@+id/feed_date"
                 android:layout_width="@dimen/zero_dp"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="@dimen/eight_dp"
+                android:layout_marginRight="@dimen/eight_dp"
+                android:textColor="@android:color/holo_blue_dark"
                 android:layout_weight="1"
+                android:textStyle="bold"
                 android:gravity="end"
                 android:textSize="@dimen/one_two_text_size_sp"
                 tools:text="@string/date" />
