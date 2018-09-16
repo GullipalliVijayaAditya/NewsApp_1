@@ -19,12 +19,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class QueryUtils {
+
     private static final String LOG_TAG = QueryUtils.class.getName();
 
     private QueryUtils() {
 
     }
 
+    /**
+     * Return a list of {@link NewsData} objects that has been built up from
+     * parsing the given JSON response.
+     */
     private static List<NewsData> extractNewsFeedsFromJson(String newsFeedJSON) {
 
         if (TextUtils.isEmpty(newsFeedJSON)) {
@@ -81,7 +86,6 @@ public class QueryUtils {
     private static String makeHttpRequest(URL url) throws IOException {
         String jsonResponse = "";
 
-        // If the URL is null, then return early.
         if (url == null) {
             return jsonResponse;
         }
@@ -114,6 +118,10 @@ public class QueryUtils {
         return jsonResponse;
     }
 
+    /**
+     * Convert the {@link InputStream} into a String which contains the
+     * whole JSON response from the server.
+     */
     private static String readFromStream(InputStream inputStream) throws IOException {
         StringBuilder output = new StringBuilder();
         if (inputStream != null) {
@@ -128,6 +136,9 @@ public class QueryUtils {
         return output.toString();
     }
 
+    /**
+     * Query the Guardian dataset and return a list of {@link NewsData} objects.
+     */
     public static List<NewsData> fetchEarthquakeData(String requestUrl) {
         URL url = createUrl(requestUrl);
         Log.d(LOG_TAG, "URL " + url);

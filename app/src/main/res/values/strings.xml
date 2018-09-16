@@ -1,10 +1,27 @@
 <resources>
     <string name="app_name">News App Stage 1</string>
-    <string name="network_status">no internet connection!Please Check internet connection</string>
-    <string name="status_text">no news found!</string>
-    <string name="imageHere">imageHere</string>
-    <string name="news">News</string>
-    <string name="headlines">Headlines</string>
-    <string name="articles">Articles</string>
-    <string name="date">00/00/0000</string>
+    <string name="settings_menu_item">Settings</string>
+    <string name="settings_title">News Feed Settings</string>
+    <string name="setting_order_by_label">Order By</string>
+    <string name="setting_order_by_key">order_by</string>
+    <string name="setting_order_by_default">@string/setting_order_by_published_value</string>
+    <string name="setting_order_by_published_label">Published</string>
+    <string name="setting_order_by_published_value">published</string>
+    <string name="setting_order_by_newspaper_edition_label">Newspaper Edition</string>
+    <string name="setting_order_by_newspaper_edition_value">newspaper-edition</string>
+    <string name="setting_order_by_last_modified_label">Last Modified</string>
+    <string name="setting_order_by_last_modified_value">last-modified</string>
+    <string name="no_internet_text">no internet</string>
+    <string name="no_news">no news found! \nTry Again Later</string>
+    <string name="retry_button">Retry</string>
+    <string name="date_spilter">T</string>
+    <string name="spinner_images_path_identifier">\@drawable/</string>
+    <string name="query_string_show_fields">show-fields</string>
+    <string name="query_parameter_thumbnail">thumbnail</string>
+    <string name="query_string_show_tags">show-tags</string>
+    <string name="query_string_order_date">order-date</string>
+    <string name="query_string_page_size">page-size</string>
+    <string name="query_parameter_contributor">contributor</string>
+    <string name="query_string_section">section</string>
+    <string name="query_string_q">q</string>
 </resources>

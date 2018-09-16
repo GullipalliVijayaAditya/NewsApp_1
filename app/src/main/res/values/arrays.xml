@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="settings_order_by_labels">
+        <item>@string/setting_order_by_published_label</item>
+        <item>@string/setting_order_by_newspaper_edition_label</item>
+        <item>@string/setting_order_by_last_modified_label</item>
+    </string-array>
+
+    <string-array name="settings_order_by_values">
+        <item>@string/setting_order_by_published_value</item>
+        <item>@string/setting_order_by_newspaper_edition_value</item>
+        <item>@string/setting_order_by_last_modified_value</item>
+    </string-array>
+
+    <string-array name="category_value">
+        <item></item>
+        <item>general</item>
+        <item>world</item>
+        <item>education</item>
+        <item>politics</item>
+        <item>sport</item>
+        <item>environment</item>
+        <item>business</item>
+        <item>technology</item>
+        <item>culture</item>
+        <item>music</item>
+        <item>fashion</item>
+        <item>food</item>
+        <item>books</item>
+        <item>science</item>
+        <item>tv_and_radio</item>
+        <item>lifestyle</item>
+    </string-array>
+
+
+    <string-array name="category_search">
+        <item></item>
+        <item></item>
+        <item>world</item>
+        <item>education</item>
+        <item>politics</item>
+        <item>sport</item>
+        <item>environment</item>
+        <item>business</item>
+        <item>technology</item>
+        <item>culture</item>
+        <item>music</item>
+        <item>fashion</item>
+        <item>food</item>
+        <item>books</item>
+        <item>science</item>
+        <item>tv-and-radio</item>
+        <item>lifeandstyle</item>
+    </string-array>
+
+    <string-array name="category_lable">
+        <item>Select Category</item>
+        <item>All</item>
+        <item>World</item>
+        <item>Education</item>
+        <item>Politics</item>
+        <item>Sport</item>
+        <item>Environment</item>
+        <item>Business</item>
+        <item>Technology</item>
+        <item>Culture</item>
+        <item>Music</item>
+        <item>Fashion</item>
+        <item>Food</item>
+        <item>Books</item>
+        <item>Science</item>
+        <item>Tv And Radio</item>
+        <item>Life Style</item>
+    </string-array>
+</resources>
